@@ -27,8 +27,7 @@ export class NoteService {
 
   updateNote(id: string, updatedFields: Partial<Note>) {
     const note = this.getNote(id);
-    Object.assign({note}, updatedFields);
-    //if a note error will come up, start with this one
+    Object.assign(note!, updatedFields);
   }
 
   deleteNote(id: string) {
